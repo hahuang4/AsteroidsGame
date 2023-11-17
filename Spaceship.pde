@@ -1,34 +1,29 @@
-Spaceship mySpaceship;
-Star[] stars;
-
-void setup() {
-  size(800, 600);
-  mySpaceship = new Spaceship();
-  stars = new Star[50];
-
-  for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
+class Spaceship extends Floater {
+  Spaceship() {
+    corners = 4;
+    xCorners = new int[corners];
+    yCorners = new int[corners];
+    xCorners[0] = -8;
+    yCorners[0] = -8;
+    xCorners[1] = 16;
+    yCorners[1] = 0;
+    xCorners[2] = -8;
+    yCorners[2] = 8;
+    xCorners[3] = -2;
+    yCorners[3] = 0;
+    myColor = color(255);
+    myCenterX = width / 2;
+    myCenterY = height / 2;
+    myXspeed = 0;
+    myYspeed = 0;
+    myPointDirection = 0;
   }
-}
 
-void draw() {
-  background(0);
-  mySpaceship.show();
-  mySpaceship.move();
-
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].show();
-  }
-}
-
-void keyPressed() {
-  if (key == 'a' || key == 'A') {
-    mySpaceship.turn(-10);
-  } else if (key == 'd' || key == 'D') {
-    mySpaceship.turn(10);
-  } else if (key == 'w' || key == 'W') {
-    mySpaceship.accelerate(0.1);
-  } else if (key == 'h' || key == 'H') {
-    mySpaceship.hyperspace();
+  void hyperspace() {
+    myCenterX = random(width);
+    myCenterY = random(height);
+    myPointDirection = random(360);
+    myXspeed = 0;
+    myYspeed = 0;
   }
 }
