@@ -1,7 +1,4 @@
-Spaceship mySpaceship;
-Star[] stars;
-
-void setup() {
+public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
@@ -11,7 +8,7 @@ void setup() {
   }
 }
 
-void draw() {
+public void draw() {
   background(0);
   mySpaceship.show();
   mySpaceship.move();
@@ -21,7 +18,7 @@ void draw() {
   }
 }
 
-void keyPressed() {
+public void keyPressed() {
   if (key == 'a' || key == 'A') {
     mySpaceship.turn(-10);
   } else if (key == 'd' || key == 'D') {
@@ -32,3 +29,4 @@ void keyPressed() {
     mySpaceship.hyperspace();
   }
 }
+
