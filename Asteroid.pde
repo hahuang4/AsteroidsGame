@@ -20,6 +20,8 @@ yCorners [4] = 8;
 xCorners [5] = -5;
 yCorners [5] = 0;
 myColor = color(255);
+myCenterX = width / 2;
+    myCenterY = height / 2;
     rotationSpeed = random(-0.02, 0.02); // Random rotation speed
   }
 
