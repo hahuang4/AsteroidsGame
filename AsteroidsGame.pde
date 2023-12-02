@@ -32,7 +32,7 @@ void draw() {
 
     if (distance < 20) {
       // Remove the asteroid if there's a collision
-      asteroids.remove(i);
+      asteroid.remove(i);
     }
   }
 }
