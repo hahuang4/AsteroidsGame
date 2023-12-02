@@ -23,6 +23,8 @@ myColor = color(255);
 myCenterX = width / 2;
     myCenterY = height / 2;
     rotationSpeed = random(-0.02, 0.02); // Random rotation speed
+x = random(width);
+    y = random(height);
   }
 
   // Override the move() method to add rotation
