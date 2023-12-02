@@ -1,22 +1,20 @@
-ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
-public void setup() {
+ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
+
+void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
-
-
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
 
- for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 5; i++) {
     asteroids.add(new Asteroid());
   }
 }
 
-
-public void draw() {
+void draw() {
   background(0);
   mySpaceship.show();
   mySpaceship.move();
@@ -24,13 +22,21 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-for (Asteroid asteroid : asteroids) {
+
+  for (int i = asteroids.size() - 1; i >= 0; i--) {
+    Asteroid asteroid = asteroids.get(i);
     asteroid.show();
     asteroid.move();
+
+    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
+    if (distance < 20) {
+      // Remove the asteroid if there's a collision
+      asteroids.remove(i);
+    }
   }
 }
 
-public void keyPressed() {
+void keyPressed() {
   if (key == 'a' || key == 'A') {
     mySpaceship.turn(-10);
   } else if (key == 'd' || key == 'D') {
