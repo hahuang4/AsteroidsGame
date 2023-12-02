@@ -25,18 +25,16 @@ void draw() {
     stars[i].show();
   }
 
-  for (Asteroid asteroid : asteroids) {
-    asteroid.show();
-    asteroid.move();
-
-    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
-
-    if (distance < 20) {
-      // Remove the asteroid if there's a collision
-      asteroids.remove(asteroid);
-      break;  // exit the loop to avoid ConcurrentModificationException
+  for (int i = 0; i < asteroids.size(); i++) 
+{
+    asteroids.get(i).move();
+    asteroids.get(i).show();
+    if (dist(asteroids.get(i).getX(), asteroids.get(i).getY(), 
+             s.getX(), s.getY()) < 40)
+    {
+        noLoop(); // collision!
     }
-  }
+}
 }
 
 void keyPressed() {
