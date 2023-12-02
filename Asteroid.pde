@@ -3,7 +3,7 @@ class Asteroid extends Floater {
 
   // Constructor to initialize variables
  public Asteroid() {
-    super();
+   
 corners = 6;
 Corners = new int [corners];
 Corners = new int [corners];
