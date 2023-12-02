@@ -2,10 +2,16 @@ public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
+ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
+
+ for (int i = 0; i < 5; i++) {
+    asteroids.add(new Asteroid());
+  }
+}
 }
 
 public void draw() {
@@ -16,6 +22,9 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
+for (Asteroid asteroid : asteroids) {
+    asteroid.show();
+    asteroid.move();
 }
 
 public void keyPressed() {
