@@ -23,10 +23,9 @@ void draw() {
     stars[i].show();
   }
 
-  // Use an iterator to safely remove asteroids
-  Iterator<Asteroid> iterator = asteroids.iterator();
-  while (iterator.hasNext()) {
-    Asteroid asteroid = iterator.next();
+  
+  if (Asteroid asteroid : asteroids) {
+  
     asteroid.show();
     asteroid.move();
 
