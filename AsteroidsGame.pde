@@ -25,7 +25,7 @@ public void draw() {
   }
 
   for (int i = asteroids.size() - 1; i >= 0; i--) {
-    
+     Asteroid asteroid = asteroids.get(i);
     asteroids.show();
     asteroids.move();
 
