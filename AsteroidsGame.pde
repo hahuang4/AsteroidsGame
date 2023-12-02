@@ -24,18 +24,16 @@ public void draw() {
     stars[i].show();
   }
 
-  for (int i = asteroids.size() - 1; i >= 0; i--) {
-     Asteroid asteroid = asteroids.get(i);
-    asteroid.show();
-    asteroid.move();
-
-    private float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
-
-    if (distance < 20) {
-      // Remove the asteroid if there's a collision
-      asteroids.remove(i);
+  for (int i = 0; i < asteroids.size(); i++) 
+{
+    asteroids.get(i).move();
+    asteroids.get(i).show();
+    if (dist(asteroids.get(i).getX(), asteroids.get(i).getY(), 
+             mySpaceship.getX(), mySpaceship.getY()) < 20)
+    {
+       asteroids.remove(i);
     }
-  }
+}
 }
 
 public void keyPressed() {
