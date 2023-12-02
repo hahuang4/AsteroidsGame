@@ -3,9 +3,9 @@ class Asteroid extends Floater {
 
   // Constructor to initialize variables
  public Asteroid() {
-   super();
-x = random(width);
-    y = random(height);
+   super(x = random(width);
+    y = random(height));
+
 corners = 6;
 xCorners = new int[corners];
 yCorners = new int[corners];
