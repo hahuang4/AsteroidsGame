@@ -19,6 +19,7 @@ xCorners [4] = -11;
 yCorners [4] = 8;
 xCorners [5] = -5;
 yCorners [5] = 0;
+myColor = color(255);
     rotationSpeed = random(-0.02, 0.02); // Random rotation speed
   }
 
@@ -27,7 +28,7 @@ yCorners [5] = 0;
     super.move(); // Call the move method of the superclass (Floater)
 turn(rotSpeed);
   }
-public void show(){
+
 
 
   // Getter for myCenterX
