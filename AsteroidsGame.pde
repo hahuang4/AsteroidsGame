@@ -26,6 +26,7 @@ for (Asteroid asteroid : asteroids) {
     asteroid.show();
     asteroid.move();
 }
+}
 
 public void keyPressed() {
   if (key == 'a' || key == 'A') {
