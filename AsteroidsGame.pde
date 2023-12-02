@@ -9,7 +9,7 @@ ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
     stars[i] = new Star();
   }
 
- for (int i = 0; i < 5; i++) {
+ for (int i = 0; i < asteroids.length; i++) {
     asteroids.add(new Asteroid());
   }
 }
@@ -23,9 +23,9 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-for (Asteroid asteroid : asteroids) {
-    asteroid.show();
-    asteroid.move();
+for (int i = 0; i < asteroids.length; i++) {
+    asteroids.show();
+    asteroids.move();
 }
 }
 
