@@ -24,7 +24,7 @@ void draw() {
   }
 
   
-  if (Asteroid asteroid : asteroids) {
+  for(Asteroid asteroid : asteroids) {
   
     asteroid.show();
     asteroid.move();
