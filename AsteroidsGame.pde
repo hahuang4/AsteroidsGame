@@ -29,11 +29,7 @@ for (int i = 5; i >= 0; i--) {
     asteroid.show();
     asteroid.move();
 
-    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
-    if (distance < 20) {
-        // Remove the asteroid if there's a collision
-        asteroid.remove(i);
-    }
+   
 }
 
 public void keyPressed() {
