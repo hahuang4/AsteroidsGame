@@ -29,7 +29,7 @@ public void draw() {
     asteroids.get(i).move();
     asteroids.get(i).show();
     if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(), 
-             mySpaceship.getX(), mySpaceship.getY()) < 20)
+             mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY()) < 20)
     {
        asteroids.remove(i);
     }
