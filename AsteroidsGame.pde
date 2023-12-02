@@ -2,14 +2,14 @@ public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
-asteroids= new Asteroid[50];
+ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
 
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
 
- for (int i = 0; i < asteroids.length; i++) {
+ for (int i = 0; i < 5; i++) {
     asteroids.add(new Asteroid());
   }
 }
@@ -23,7 +23,7 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-for (int i = 0; i < asteroids.length; i++) {
+for (int i = 0; i < 5; i++) {
     asteroids.show();
     asteroids.move();
 }
