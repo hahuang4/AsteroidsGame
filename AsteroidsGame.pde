@@ -6,11 +6,11 @@ public void setup() {
   stars = new Star[50];
   asteroids = new ArrayList<Asteroid>();
 
-  for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
+  for (int z = 0; z < stars.length; z++) {
+    stars[z] = new Star();
   }
 
-  for (int i = 0; i < 5; i++) {
+  for (int j = 0; j < 5; j++) {
     asteroids.add(new Asteroid());
   }
 }
