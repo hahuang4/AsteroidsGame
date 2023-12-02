@@ -5,25 +5,16 @@ class Asteroid extends Floater {
  public Asteroid() {
    super();
 
-corners = 6;
-xCorners = new int[corners];
-yCorners = new int[corners];
-xCorners[0] = -11;
-yCorners [0] = -8;
-xCorners [1] = 7;
-yCorners [1] = -8;
-xCorners [2] = 13;
-yCorners [2] = 0;
-xCorners[3] = 6;
-yCorners [3] = 10;
-xCorners [4] = -11;
-yCorners [4] = 8;
-xCorners [5] = -5;
-yCorners [5] = 0;
-myColor = color(255);
-  rotationSpeed = random(-2, 2); // Random rotation speed
-myCenterX = random(width);
+corners = 10;
+    xCorners = new int[] {3*14, 3*10, 3*6, 3*4, 3*-10, 3*-12, 3*-6, 3*-4, 3*0, 3*6};
+    yCorners = new int[] {3*0, 3*10, 3*10, 3*14, 3*10, 3*0, 3*-6, 3*-10, 3*-10, 3*-12};
+    myColor = 240;
+    myCenterX = random(width);
     myCenterY = random(height);
+    myXspeed = random(3) - 1.5;
+    myYspeed = random(3) - 1.5;
+    myPointDirection = random(360);
+    rotationSpeed = random(4) - 2;
 
   }
 
