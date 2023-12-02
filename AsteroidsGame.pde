@@ -11,6 +11,7 @@ ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
 
  for (int i = 0; i < 5; i++) {
     asteroids.add(new Asteroid());
+ asteroids[i] = new Asteroid();
   }
 }
 
