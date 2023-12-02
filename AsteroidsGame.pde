@@ -1,9 +1,11 @@
-ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
+// AsteroidsGame.pde
+ArrayList<Asteroid> asteroids;
 
 void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
+  asteroids = new ArrayList<Asteroid>();
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
@@ -23,11 +25,17 @@ void draw() {
     stars[i].show();
   }
 
-  
-  for(Asteroid asteroid : asteroids) {
-  
+  for (Asteroid asteroid : asteroids) {
     asteroid.show();
     asteroid.move();
+
+    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
+
+    if (distance < 20) {
+      // Remove the asteroid if there's a collision
+      asteroids.remove(asteroid);
+      break;  // exit the loop to avoid ConcurrentModificationException
+    }
   }
 }
 
@@ -37,7 +45,7 @@ void keyPressed() {
   } else if (key == 'd' || key == 'D') {
     mySpaceship.turn(10);
   } else if (key == 'w' || key == 'W') {
-    mySpaceship.accelerate(1);
+    mySpaceship.accelerate(0.1);
   } else if (key == 'h' || key == 'H') {
     mySpaceship.hyperspace();
   }
