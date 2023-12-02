@@ -1,19 +1,20 @@
+ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
 public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
-  asteroids = new ArrayList<Asteroid>();
+
+
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
 
-  int numAsteroids = 10;  // Adjust the number of asteroids as needed
-
-  for (int i = 0; i < numAsteroids; i++) {
+ for (int i = 0; i < 5; i++) {
     asteroids.add(new Asteroid());
   }
 }
+
 
 public void draw() {
   background(0);
@@ -23,8 +24,7 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-
-  for (Asteroid asteroid : asteroids) {
+for (Asteroid asteroid : asteroids) {
     asteroid.show();
     asteroid.move();
   }
