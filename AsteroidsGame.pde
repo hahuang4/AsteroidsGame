@@ -1,5 +1,4 @@
 ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
-ArrayList<Integer> asteroidsToRemove = new ArrayList<Integer>();
 
 void setup() {
   size(800, 600);
@@ -24,25 +23,19 @@ void draw() {
     stars[i].show();
   }
 
-  asteroidsToRemove.clear(); // Clear the list of asteroids to remove
-
-  // Iterate in reverse order to avoid issues with removing elements
-  for (int i = asteroids.size() - 1; i >= 0; i--) {
-    Asteroid asteroid = asteroids.get(i);
+  // Use an iterator to safely remove asteroids
+  Iterator<Asteroid> iterator = asteroids.iterator();
+  while (iterator.hasNext()) {
+    Asteroid asteroid = iterator.next();
     asteroid.show();
     asteroid.move();
 
     float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
 
     if (distance < 20) {
-      // Mark the asteroid for removal
-      asteroidsToRemove.add(i);
+      // Remove the asteroid if there's a collision
+      iterator.remove();
     }
-  }
-
-  // Remove asteroids outside the loop to avoid ConcurrentModificationException
-  for (int indexToRemove : asteroidsToRemove) {
-    asteroids.remove(indexToRemove);
   }
 }
 
