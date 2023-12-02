@@ -27,7 +27,13 @@ void draw() {
     Asteroid asteroid = asteroids.get(i);
     asteroid.show();
     asteroid.move();
-
+float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
+    if (distance < 20) {
+      // Remove the asteroid if there's a collision
+      asteroids.remove(i);
+else
+i=i+0;
+    }
     
   }
 }
