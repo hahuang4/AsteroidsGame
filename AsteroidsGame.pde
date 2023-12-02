@@ -35,7 +35,7 @@ void draw() {
       asteroids.remove(i);
 }
 }
-
+}
 void keyPressed() {
   if (key == 'a' || key == 'A') {
     mySpaceship.turn(-10);
