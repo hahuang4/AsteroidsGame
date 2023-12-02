@@ -22,7 +22,7 @@ yCorners [4] = 8;
 xCorners [5] = -5;
 yCorners [5] = 0;
 myColor = color(255);
-  rotationSpeed = random(-0.02, 0.02); // Random rotation speed
+  rotationSpeed = random(-2, 2); // Random rotation speed
 
   }
 
