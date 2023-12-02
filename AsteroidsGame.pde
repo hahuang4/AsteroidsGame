@@ -29,7 +29,7 @@ void draw() {
 {
     asteroids.get(i).move();
     asteroids.get(i).show();
-    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
+    float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroids.getMyCenterX(), asteroids.getMyCenterY());
     if (distance < 20) {
       // Remove the asteroid if there's a collision
       asteroids.remove(i);
