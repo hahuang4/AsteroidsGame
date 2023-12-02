@@ -28,7 +28,7 @@ public void draw() {
 {
     asteroids.get(i).move();
     asteroids.get(i).show();
-    if (dist(asteroids.get(i).getX(), asteroids.get(i).getY(), 
+    if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(), 
              mySpaceship.getX(), mySpaceship.getY()) < 20)
     {
        asteroids.remove(i);
