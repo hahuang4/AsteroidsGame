@@ -25,15 +25,10 @@ yCorners [5] = 0;
   // Override the move() method to add rotation
   public void move() {
     super.move(); // Call the move method of the superclass (Floater)
-    angle += rotationSpeed; // Rotate the asteroid
+turn(rotSpeed);
   }
-public void move()
-{
-   turn(rotSpeed);
-   super.move();
-   //just 2 lines of code! 
-   //that’s it!
-}
+public void show(){
+
 
   // Getter for myCenterX
   public float getMyCenterX() {
