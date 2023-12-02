@@ -26,7 +26,7 @@ myColor = color(255);
   // Override the move() method to add rotation
   public void move() {
     super.move(); // Call the move method of the superclass (Floater)
-turn(rotSpeed);
+turn(rotationSpeed);
   }
 
 
