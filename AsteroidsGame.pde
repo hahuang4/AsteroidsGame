@@ -20,8 +20,8 @@ public void draw() {
   mySpaceship.show();
   mySpaceship.move();
 
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].show();
+  for (int x = 0; i < stars.length; x++) {
+    stars[x].show();
   }
 
   for (int i = 0; i < asteroids.size(); i++) 
