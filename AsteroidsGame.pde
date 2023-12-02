@@ -12,7 +12,7 @@ ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
     asteroids.add(new Asteroid());
   }
 }
-}
+
 
 public void draw() {
   background(0);
