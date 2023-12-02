@@ -30,7 +30,7 @@ void draw() {
     asteroids.get(i).move();
     asteroids.get(i).show();
     if (dist(asteroids.get(i).getX(), asteroids.get(i).getY(), 
-             s.getX(), s.getY()) < 40)
+             myCenterX.getX(), myCenterY.getY()) < 40)
     {
         noLoop(); // collision!
     }
