@@ -42,7 +42,7 @@ void keyPressed() {
   } else if (key == 'd' || key == 'D') {
     mySpaceship.turn(10);
   } else if (key == 'w' || key == 'W') {
-    mySpaceship.accelerate(0.1);
+    mySpaceship.accelerate(1);
   } else if (key == 'h' || key == 'H') {
     mySpaceship.hyperspace();
   }
