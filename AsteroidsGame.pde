@@ -1,8 +1,9 @@
+ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
 public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
-ArrayList<Asteroids> asteroids = new ArrayList<Asteroids>();
+
 
 
   for (int i = 0; i < stars.length; i++) {
