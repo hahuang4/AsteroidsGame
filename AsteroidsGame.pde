@@ -3,7 +3,7 @@ public void setup() {
   mySpaceship = new Spaceship();
   stars = new Star[50];
 asteroids= new Asteroid[50];
-ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
+
 
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
