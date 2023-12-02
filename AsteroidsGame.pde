@@ -2,6 +2,7 @@ public void setup() {
   size(800, 600);
   mySpaceship = new Spaceship();
   stars = new Star[50];
+asteroid= new asteroid[50];
 ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
 
   for (int i = 0; i < stars.length; i++) {
