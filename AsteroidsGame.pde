@@ -26,8 +26,8 @@ public void draw() {
 
   for (int i = asteroids.size() - 1; i >= 0; i--) {
      Asteroid asteroid = asteroids.get(i);
-    asteroids.show();
-    asteroids.move();
+    asteroid.show();
+    asteroid.move();
 
     private float distance = dist(mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY(), asteroid.getMyCenterX(), asteroid.getMyCenterY());
 
