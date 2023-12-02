@@ -1,5 +1,5 @@
 class Asteroid extends Floater {
-  private float rotationSpeed; // Speed of rotation for each asteroid
+  private double rotationSpeed; // Speed of rotation for each asteroid
 
   // Constructor to initialize variables
  public Asteroid() {
@@ -36,12 +36,12 @@ turn(rotationSpeed);
 
 
   // Getter for myCenterX
-  public float getMyCenterX() {
+  public double getMyCenterX() {
     return myCenterX;
   }
 
   // Getter for myCenterY
- public float getMyCenterY() {
+ public double getMyCenterY() {
     return myCenterY;
   }
 }
