@@ -25,10 +25,10 @@ public void draw() {
   for (int i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-for (int i = 0; i < 5; i++) {
-    asteroids.show();
-    asteroids.move();
-}
+for (Asteroid asteroid : asteroids) {
+    asteroid.show();
+    asteroid.move();
+  }
 }
 
 public void keyPressed() {
