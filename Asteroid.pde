@@ -4,6 +4,8 @@ class Asteroid extends Floater {
   // Constructor to initialize variables
  public Asteroid() {
    super();
+x = random(width);
+    y = random(height);
 corners = 6;
 xCorners = new int[corners];
 yCorners = new int[corners];
@@ -21,8 +23,7 @@ xCorners [5] = -5;
 yCorners [5] = 0;
 myColor = color(255);
   rotationSpeed = random(-0.02, 0.02); // Random rotation speed
-x = random(width);
-    y = random(height);
+
   }
 
   // Override the move() method to add rotation
