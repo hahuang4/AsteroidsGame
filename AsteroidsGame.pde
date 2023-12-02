@@ -20,7 +20,7 @@ public void draw() {
   mySpaceship.show();
   mySpaceship.move();
 
-  for (int x = 0; i < stars.length; x++) {
+  for (int x = 0; x < stars.length; x++) {
     stars[x].show();
   }
 
