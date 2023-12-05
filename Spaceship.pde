@@ -16,7 +16,7 @@ class Spaceship extends Floater {
     myCenterY = height / 2;
     myXspeed = 0;
     myYspeed = 0;
-    myPointDirection = 0;
+    myPointDirection = (int)(Math.random()*360);
   }
 
   public void hyperspace() {
@@ -34,4 +34,5 @@ public double getMyCenterX() {
  public double getMyCenterY() {
     return myCenterY;
   }
+public double getPointDirection(){return myPointDirection;}
 }
