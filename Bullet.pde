@@ -1,11 +1,11 @@
 class Bullet extends Floater{
-public Bullet(Spaceship the ship){
-myCenterX=the ship.getX();
-myCenterY=the ship.get();
+public Bullet(Spaceship theShip){
+myCenterX=theShip.getX();
+myCenterY=theShip.get();
 myPointDirection=theShip.getPointDirection();
 accelerate(1);
 }
-public vod show(){
+public void show(){
 ellipse((float)myCenterX,(float)myCenterY,20,20);
 }
 }
