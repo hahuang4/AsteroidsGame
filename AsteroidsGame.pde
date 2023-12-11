@@ -50,5 +50,5 @@ public void keyPressed() {
   } else if (key == 'h' || key == 'H') {
     mySpaceship.hyperspace();
   } else if(key==' ')
-shots.add(new Bullet(shots));
+shots.add(new Bullet(mySpaceship));
 }
