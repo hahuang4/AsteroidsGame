@@ -4,7 +4,7 @@ myCenterX=mySpaceship.getMyCenterX();
 myCenterY=mySpaceship.getMyCenterY();
 myXspeed=myYspeed=0;
 myPointDirection=theShip.getPointDirection();
-accelerate(1);
+accelerate(10);
 }
 public void show(){
 ellipse((float)myCenterX,(float)myCenterY,20,20);
