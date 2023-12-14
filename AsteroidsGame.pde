@@ -38,11 +38,11 @@ public void draw() {
 for (int q = shots.size() - 1; q >= 0; q--) {
     shots.get(q).move();
     shots.get(q).show();
-    for (int i = asteroids.size() - 1; i >= 0; i--) {
-      if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(),
+    for (int m = asteroids.size() - 1; m >= 0; m--) {
+      if (dist(asteroids.get(m).getMyCenterX(), asteroids.get(m).getMyCenterY(),
                shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
         // Collision detected
-        asteroids.remove(i);
+        asteroids.remove(m);
         shots.remove(q);
         break;
       }
