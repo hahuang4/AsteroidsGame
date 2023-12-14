@@ -43,7 +43,7 @@ for (int q = 0; q < shots.size(); q++) {
                shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
         // Collision detected
         asteroids.remove(asteroids.get(m));
-        shots.remove(asteroids.get(q));
+        shots.remove(shots.get(q));
         break;
       }
     }
