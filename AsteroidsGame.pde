@@ -35,10 +35,10 @@ public void draw() {
        asteroids.remove(i);
     }
 }
-for (int q = shots.size() - 1; q >= 0; q--) {
+for (int q = 0; q < asteroids.size(); q++) {
     shots.get(q).move();
     shots.get(q).show();
-    for (int m = asteroids.size() - 1; m >= 0; m--) {
+    for (int m = 0; m < asteroids.size(); m++) {
       if (dist(asteroids.get(m).getMyCenterX(), asteroids.get(m).getMyCenterY(),
                shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
         // Collision detected
