@@ -30,7 +30,7 @@ if (dist(asteroids.get(q).getMyCenterX(), asteroids.get(q).getMyCenterY(),
              shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20)
     {
 shots.remove(q);
-break();
+break;
     }
 }
 
