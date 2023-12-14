@@ -35,7 +35,7 @@ public void draw() {
        asteroids.remove(i);
     }
 }
-for (int q = 0; q < asteroids.size(); q++) {
+for (int q = 0; q < shots.size(); q++) {
     shots.get(q).move();
     shots.get(q).show();
     for (int m = 0; m < asteroids.size(); m++) {
