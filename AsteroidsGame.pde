@@ -23,23 +23,26 @@ public void draw() {
   for (int x = 0; x < stars.length; x++) {
     stars[x].show();
   }
-for (int q = shots.size() - 1; q >= 0; q--) {
-  shots.get(q).move();
-  shots.get(q).show();
-
-  for (int i = asteroids.size() - 1; i >= 0; i--) {
-asteroids.get(i).move();
-    asteroids.get(i).show();
-    if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(),
-             shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
-      // Collision detected
-      asteroids.remove(i);
-      shots.remove(q);
-      break;  // Stop the loop to prevent index out of bounds exceptions
+for(int q=0;q< shots.size(); q++){
+shots.get(q).move();
+shots.get(q).show();
+if (dist(asteroids.get(q).getMyCenterX(), asteroids.get(q).getMyCenterY(), 
+             shots.getMyCenterX(), shots.getMyCenterY()) < 20)
+    {
+shots.remove(q);
     }
-  }
 }
 
+  for (int i = 0; i < asteroids.size(); i++) 
+{
+    asteroids.get(i).move();
+    asteroids.get(i).show();
+    if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(), 
+             mySpaceship.getMyCenterX(), mySpaceship.getMyCenterY()) < 20)
+    {
+       asteroids.remove(i);
+    }
+}
 }
 
 public void keyPressed() {
