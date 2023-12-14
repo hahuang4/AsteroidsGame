@@ -1,8 +1,8 @@
 ArrayList<Asteroid> asteroids;
 ArrayList <Bullet> shots= new ArrayList<Bullet>();
+Spaceship mySpaceship = new Spaceship();
 public void setup() {
   size(800, 600);
-  mySpaceship = new Spaceship();
   stars = new Star[50];
   asteroids = new ArrayList<Asteroid>();
 
