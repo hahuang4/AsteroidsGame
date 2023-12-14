@@ -29,7 +29,7 @@ for (int q = shots.size() - 1; q >= 0; q--) {
 
   for (int i = asteroids.size() - 1; i >= 0; i--) {
     if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(),
-             shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
+             shots.getMyCenterX(), shots.getMyCenterY()) < 20) {
       // Collision detected
       asteroids.remove(i);
       shots.remove(q);
