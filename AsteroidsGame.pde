@@ -23,15 +23,7 @@ public void draw() {
   for (int x = 0; x < stars.length; x++) {
     stars[x].show();
   }
-for(int q=0;q< shots.size(); q++){
-shots.get(q).move();
-shots.get(q).show();
-if (dist(asteroids.get(q).getMyCenterX(), asteroids.get(q).getMyCenterY(), 
-             shots.getMyCenterX(), shots.getMyCenterY()) < 20)
-    {
-shots.remove(q);
-    }
-}
+
 
   for (int i = 0; i < asteroids.size(); i++) 
 {
@@ -43,6 +35,19 @@ shots.remove(q);
        asteroids.remove(i);
     }
 }
+for (int q = shots.size() - 1; q >= 0; q--) {
+    shots.get(q).move();
+    shots.get(q).show();
+    for (int i = asteroids.size() - 1; i >= 0; i--) {
+      if (dist(asteroids.get(i).getMyCenterX(), asteroids.get(i).getMyCenterY(),
+               shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20) {
+        // Collision detected
+        asteroids.remove(i);
+        shots.remove(q);
+        break;
+      }
+    }
+  }
 }
 
 public void keyPressed() {
