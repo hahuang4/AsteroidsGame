@@ -27,7 +27,7 @@ for(int q=0;q< shots.size(); q++){
 shots.get(q).move();
 shots.get(q).show();
 if (dist(asteroids.get(q).getMyCenterX(), asteroids.get(q).getMyCenterY(), 
-             shots.getMyCenterX(), shots.getMyCenterY()) < 20)
+             shots.get(q).getMyCenterX(), shots.get(q).getMyCenterY()) < 20)
     {
 shots.remove(q);
     }
